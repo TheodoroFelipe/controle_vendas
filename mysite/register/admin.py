@@ -12,8 +12,8 @@ admin.site.register(Vendas, VendasAdmin)
 
 
 class TipoVendasAdmin(admin.ModelAdmin):
-    fields = ['nome', 'data_registro']
-    search_fields = ['nome']
+    fields = ['tp_nome', 'data_registro']
+    search_fields = ['tp_nome']
 
 
 admin.site.register(TipoVendas, TipoVendasAdmin)

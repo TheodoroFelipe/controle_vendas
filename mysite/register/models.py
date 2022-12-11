@@ -20,8 +20,14 @@ class Vendas(models.Model):
 
 class TipoVendas(models.Model):
     tp_id = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=200)
+    tp_nome = models.CharField(max_length=200)
     data_registro = models.DateTimeField('data de registro')
 
     def __str__(self):
-        return self.nome
+        return self.tp_nome
+
+
+class Propesccao(models.Model):
+    pc_id = models.AutoField(primary_key=True)
+    pc_vendas = models.DecimalField(null=False, max_digits=19, decimal_places=2)
+    pc_conversao = models.DecimalField(null=False, max_digits=19, decimal_places=2)
